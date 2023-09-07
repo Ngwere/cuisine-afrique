@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.config');
 
-const User = sequelize.define('User', {
+const Restau = sequelize.define('Restau', {
   // Columns/fields of the table
   id: {
     type: DataTypes.INTEGER,
@@ -20,8 +20,21 @@ const User = sequelize.define('User', {
   password: {
     type: DataTypes.STRING,
   },
- 
+  restauName: {
+    type: DataTypes.STRING,
+  },
+  country: {
+    type: DataTypes.STRING,
+  },
+  town: {
+    type: DataTypes.STRING,
+  },
+  quarter: {
+    type: DataTypes.STRING,
+  }
+  
+  
   // ... add more columns as needed
 });
 
-module.exports = User;
+module.exports = Restau;

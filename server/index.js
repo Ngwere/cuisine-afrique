@@ -27,7 +27,8 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use("/api/users", require("./routes/userRoutes"));
-
+app.use("/api/restaurants", require("./routes/restaurantRoutes"));
+app.use("/api/meals", require("./routes/mealRoutes"));
 //database sync
 sequelize
   .sync()

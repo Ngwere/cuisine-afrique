@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.config');
 
-const User = sequelize.define('User', {
+const Meal = sequelize.define('Meal', {
   // Columns/fields of the table
   id: {
     type: DataTypes.INTEGER,
@@ -12,16 +12,24 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  email: {
+  description: {
     type: DataTypes.STRING,
-    allowNull: false,
-    unique: true
+    allowNull: false
   },
-  password: {
+  cuisineType: {
     type: DataTypes.STRING,
+    allowNull: false
+  },
+  ingredient: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  image: {
+    type: DataTypes.BLOB,
+    allowNull: false
   },
  
   // ... add more columns as needed
 });
 
-module.exports = User;
+module.exports = Meal;
