@@ -29,6 +29,8 @@ app.use(express.json());
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/restaurants", require("./routes/restaurantRoutes"));
 app.use("/api/meals", require("./routes/mealRoutes"));
+app.use("/api/mealratings", require("./routes/mealRatings"));
+
 //database sync
 sequelize
   .sync()

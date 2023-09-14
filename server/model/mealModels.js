@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.config');
+const Restau = require('./restauModels');
 
 const Meal = sequelize.define('Meal', {
   // Columns/fields of the table
@@ -16,8 +17,20 @@ const Meal = sequelize.define('Meal', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  restaurantId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: Restau.restauModels,
+      key: 'id',
+    },
+  },
   cuisineType: {
     type: DataTypes.STRING,
+    allowNull: false
+  },
+  price: {
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   ingredient: {
@@ -31,5 +44,7 @@ const Meal = sequelize.define('Meal', {
  
   // ... add more columns as needed
 });
+
+Meal.belongsTo(Restau, { foreignKey: 'restaurantId' });
 
 module.exports = Meal;

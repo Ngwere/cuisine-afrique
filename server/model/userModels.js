@@ -1,5 +1,6 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, Association } = require('sequelize');
 const sequelize = require('../config/db.config');
+//const associations = require('./associations');
 
 const User = sequelize.define('User', {
   // Columns/fields of the table
@@ -23,5 +24,7 @@ const User = sequelize.define('User', {
  
   // ... add more columns as needed
 });
+
+
 
 module.exports = User;

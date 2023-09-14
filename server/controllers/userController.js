@@ -1,5 +1,18 @@
 const asyncHandler = require("express-async-handler");
 const User = require('../model/userModels');
+const express = require('express');
+const router = express.Router();
+
+const { body, validationResult } = require('express-validator');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+router.post(
+    '/signup',
+    
+  );
+  
+
 //@desc Get users
 //@route Get /api/users
 //@access public

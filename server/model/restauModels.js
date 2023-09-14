@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.config');
+//const associations = require('./associations');
 
 const Restau = sequelize.define('Restau', {
   // Columns/fields of the table

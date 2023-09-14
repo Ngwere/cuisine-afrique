@@ -31,8 +31,9 @@ const createMeal = asyncHandler(async (req, res) => {
         cuisineType: req.body.cuisineType,
         restauName: req.body.restauName,
         ingredient: req.body.ingredient,
+        restaurantId: req.body.restaurantId,
+        price: req.body.price,
         image: req.body.image
-     
     };
 
     //saving the values to the database
