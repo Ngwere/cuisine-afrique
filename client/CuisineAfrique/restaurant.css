@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100, 300, 400, 500, 600, 700, 800, 900&display=swap');
+ 
+/* font-family: 'Big Shoulders Text', cursive; */
+ 
+.nav-flex-row {
+    display: flex;
+    flex-direction:row;
+    justify-content: right;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+ 
+.nav-flex-row li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 20px 15px;
+}
+ 
+.nav-flex-row li a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:blue;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.nav-flex-row li a:hover{
+    background: #E7E7E7;
+}
+ 
+.section-intro {
+    height: 820px;
+    background-image: url(images/foodplatter.jpeg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.section-intro h1 {
+    text-align: center;
+    color: firebrick;
+    font-size: 4em;
+    font-weight: 550;
+}
+.section-intro p {
+    text-align: center;
+    justify-content: center;
+    color:black;
+    font-size: 2em;
+    font-weight:300;
+}
+.section-intro header {
+    display: flex;
+    flex: 4;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.link-to-book-wrapper {
+    flex: 1;
+}
+ 
+.about-section {
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3c0;
+    padding: 50px 30px;
+}
+ 
+.link-to-book {
+    color: #ffffff;
+    display: block;
+    border: 2px solid #ffffff;
+    padding: 5px 10px;
+}
+ 
+a.link-to-book:hover {
+    background-color: goldenrod;
+    color: grey;
+    text-decoration: none;
+}
+ 
+.about-section p,
+.about-section h3 {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+ 
+.carousel-inner {
+    width:100%;
+    height: auto;
+    max-width: 100%;
+    margin: 10px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #FFD700; /* Gold color for rating */
+}
+
+.restaurant {
+    font-size: 1rem;
+    color: #e100ff; /* Gold color for rating */
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: blue;
+    margin-top: 10px;
+}
+
+.menu-item img{
+    width:200px;
+    height:150px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+*{
+    box-sizing:border-box;
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  *{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+
+.body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), url(/images/Book\ now.jpeg)), center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+    padding-bottom: 200px;
+}
+.card-container{
+    display:grid;
+    grid-template-columns: 420px 420px;
+    position:relative;
+}
+.card-img{
+    height: 820px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-content{
+    background: #ffffff;
+    height:330px
+}
+.card-content h3{
+    text-align: center;
+    color:#000;
+    padding:25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display:flex;
+    width:90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display:block;
+    width: 100%;
+    margin:15px 12px;
+    padding:5px;
+    font-size:15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid #eee;
+    font-weight:300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color:gray;
+}
+form input[type = submit]{
+    color:#ffffff;
+    background:orangered;
+    padding:12px 0;
+    border-radius: 4px;
+    cursor:pointer;
+}
+form input[
+    type = submit]:hover{
+        opacity:0.9;
+    }
+@media(max-width:992px){
+    .card-container{
+        grid-template-columns: 100%;
+    }
+    .card-img{
+        height:800px;
+        width:auto;
+    }
+}
+@media (min-width:577px) and (max-width: 800px) {
+ 
+    .section-intro {
+        height: 500px;
+    }
+ 
+    .about-section p,
+    .about-section h3 {
+        font-size: 20px;
+    }
+ 
+    .carousel-inner {
+        height: auto;
+    }
+ 
+    .row-flex {
+        display: flex;
+        flex-direction: column;
+    }
+}
+ 
+@media screen and (max-width: 576px) {
+    .section-intro {
+        height: 300px;
+    }
+ 
+    .about-section {
+        padding: 30px;
+    }
+ 
+    .section-intro h1 {
+        font-size: 2em;
+    }
+ 
+    .about-section p,
+    .about-section h3 {
+        font-size: 15px;
+    }
+ 
+    .carousel-inner {
+        height: auto;
+    }
+ 
+    .row-flex {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    .row-flex h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+    @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    .form-group p {
+        font-size: 15px;
+    }
+ 
+    .opening-time p span,
+    .contact-address p span {
+        font-size: 15px;
+        text-align: center;
+    }
+ 
+}
+/* footer CSS */
+.footer__container{
+    background-color: black;
+    padding:5rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer__logo {
+    color:antiquewhite;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display:flex;
+    justify-content: center;
+}
+.footer__link--wrapper {
+    display: flex;
+}
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width:160px;
+    box-sizing: border-box;
+}
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+.footer_-link--items > h2 {
+    color: antiquewhite;
+}
+.footer__link--items a {
+    color:antiquewhite;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.footer__link--items a:hover {
+    color:azure;
+    transition: 0.3s ease-out;
+}

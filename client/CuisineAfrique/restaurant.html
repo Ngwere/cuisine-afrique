@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+            initial-scale=1, shrink-to-fit=no">
+ 
+    <link rel="stylesheet" href="restaurant.css">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+ 
+    <title>CuisineAfrique Website</title>
+</head>
+ 
+<body>
+ 
+    <!-- navbar  -->
+    <nav>
+        <ul class="nav-flex-row">
+            <li class="navbar__item">
+                <a href="" class="navbar__links">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#reservation">Reservation</a>
+            </li>
+            <li class="nav-item" >
+                <a href="menu.html" id="mobile-menu">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="location.html">Location</a>
+            </li>
+            <li class="nav-item">
+                <a href="restauLogin.html">Restaurant Registration/Login</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="section-intro">
+        <header>
+            <h1> Welcome to CuisineAfrique!</h1>
+            <p>...your guide to delicious African dishes.</p>
+        </header>
+        <div class="link-to-book-wrapper">
+            <a class="link-to-book"
+                href="#reservations">Book a table</a>
+        </div>
+    </section>
+ 
+    <section class="about-section">
+        <article>
+            <h3>
+                ABOUT US
+            </h3>          
+            <p>
+                Welcome to CuisineAfrique where we treat you with delicious authentic meals from Sub-Saharan Africa. 
+                We are your one-stop shop linking you to restaurants with flavorful meals whether you want fine dining or a road side vendor.
+            </p>
+ 
+        </article>
+    </section>
+ 
+    <!-- carousel section -->
+    <div id="carouselExampleControls"
+        class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/ndole.jpeg"
+                    class="d-block w-100" alt="food">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Groundnut-Soup.webp"
+                    class="d-block w-100" alt="food">
+            </div>
+            <div class="carousel-item">
+                <img src="images/cameroon porridge.jpg"
+                    class="d-block w-100" alt="food">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Poulet-DG-1.webp"
+                    class="d-block w-100" alt="food">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Poisson-Braise-1.webp"
+                    class="d-block w-100" alt="food">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Yellow-Soup-and-Achu.webp"
+                    class="d-block w-100" alt="food">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Fufu-and-Eru.webp"
+                    class="d-block w-100" alt="food">
+            </div>
+        </div>
+        <a class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"
+                aria-hidden="true">
+            </span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button" data-slide="next">
+            <span class="carousel-control-next-icon"
+                aria-hidden="true">
+            </span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="meal-card">
+        <div class="column">
+            <div class="menu-item">
+                <h2>Restaurant Name:
+                    5 Fouchettes</h2>
+                
+                <img src="images/Ndole.jpg" alt="Ndole">
+                <p class="description">Food Name:Ndole
+                    <br>Ndolé is a traditional dish of the Duala people of one of the coastal regions of Cameroon. 
+                It is a peanut-based stew made with Ndolé leaves (also called bitter leaves), crayfish, beef, and spices. 
+                The whole thing is served with miondo (a starchy mixture of ground cassava tied up in banana leaves) or plantain.</p>
+                <div class="price">Price: 7000 FCFA</div>
+                <div class="rating">Rating: 4.5/5</div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="menu-item">
+                <h2>Restaurant Name:
+                    Aquarius Marina 2000</h2>
+                
+                <img src="images/Poulet-DG-1.webp" alt="Poulet-DG">
+                <p class="description">Food Name:Poulet-DG
+                    <br>This melange of seasoned chicken and fried ripe plantain together with a flavorful tomato sauce creates a colorful gombo that tastes absolutely delicious. 
+                    It is one of the best dishes to start with if you are new to Cameroonian cuisine</p>
+                <div class="price">Price: 8500 FCFA</div>
+                <div class="rating">Rating: 5/5</div>
+            </div>
+        </div>
+         <div class="column">
+            <div class="menu-item">
+                <h2>Restaurant Name:
+                    Mandara</h2>
+                
+                <img src="images/Kondre.webp" alt="Kondre">
+                <p class="description">Food Name:Kondre
+                    <br>Kondré is a highly spiced one-pot dish that originates from the western part of Cameroon. 
+                    It consists of plantain, meat (usually pork), tomatoes, onions, dry spices, and some oil. </p>
+                <div class="price">Price: 7500 FCFA</div>
+                <div class="rating">Rating: 4.8/5</div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="menu-item">
+                <h2>Restaurant Name:
+                    The Mouth Garden</h2>
+                    
+                <img src="images/Yellow-Soup-and-Achu.webp" alt="Yellow Soup & Achu" name="image">
+                <p class="description" name="description">Food Name:Yellow Soup and Achu
+                    <br>This beautiful yellow soup is one of the most delicate in Cameroon. It is traditionally made by fusing red oil, beef or chicken, limestone (yes, the rock!), and a variety of spices. 
+                    It is paired with achu (pounded cocoyam) and sometimes a small portion of huckleberry.</p>
+                <div class="price" name="price">Price: 8500 FCFA</div>
+                <div class="rating" name="rating">Rating: 4.6/5</div>
+            </div>
+        </div>
+    </div>
+        <div class="column">
+            <div class="menu-item" id="restaurantDetails">
+            </div>
+        </div>
+    </div>
+
+    
+ <!--Bookings-->
+<section class="banner">
+    <h2>BOOK YOUR TABLE NOW</h2>
+    <div class="card-container">
+        <div class="card-img"></div>
+        
+
+        <div class="card-content">
+            <h3>Reservation</h3>
+            <form>
+                <div class="form-row">
+                    <select name="days">
+                        <option value="day-select">Select Day</option>
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+
+                    <select name="hours">
+                        <option value ="hour-select">Select Hour</option>
+                        <option value="10">10:00</option>
+                        <option value="10">12:00</option>
+                        <option value="10">14:00</option>
+                        <option value="10">16:00</option>
+                        <option value="10">18:00</option>
+                        <option value="10">20:00</option>
+                        <option value="10">22:00</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Phone Number">
+                </div>
+
+                <div class="form-row">
+                    <input type="number" placeholder="How many persons?" min="1">
+                    <input type="Submit" value="BOOK TABLE">
+                </div>
+            </form>
+                </div>   
+
+    </div>
+</section>
+
+    <!--Footer Section-->
+    <div class="footer__container">
+    <div class="footer__links">
+    <div class="footer__link--wrapper">
+    <div class="footer__link--items">
+        <h2>About Us</h2>
+        <a href="/">How it Works</a>
+        <a href="/">Testimonials</a>
+        <a href="/">Restaurant Owners</a>
+        <a href="/">Terms of Services</a>
+        <a href="/">Blog</a>
+    </div>
+    <div class="footer__link--items">
+        <h2>Contact Us</h2>
+        <a href="/">Address</a>
+        <a href="/">Phone number</a>
+        <a href="/">Email Address</a>
+        <a href="/">Terms of Services</a>
+        <a href="/">Contact Us</a>
+    </div>
+    </div>
+    <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+            <h2>More Info.</h2>
+            <a href="/">Careers</a>
+            <a href="/">Promotions</a>
+            <a href="/">Partners</a>
+            <a href="/">FAQs</a>
+        </div>
+        <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Facebook</a>
+            <a href="/">Instagram</a>
+            <a href="/">LinkedIn</a>
+            <a href="/">Twitter</a>
+        </div>
+        </div>
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo"><i class="fas faa-gem"></i>CUISINEAFRIQUE</a>
+                </div>
+                <p class="website__rights">© CuisineAfrique2023.
+                    All rights reserved</p>
+                <div class="social__icons">
+                    <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="/" class="social__icon--link" target="_blank"><i class="fab fa-Twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="app.js"></script>
+
+    <!-- #region -->
+    <script>
+        const rating = null;
+        const ratingData = null;
+        fetch("http://localhost:3000/api/meals")
+          .then(res => res.json())
+          .then(data => {
+            rating = data
+          });
+
+        fetch("http://localhost:3000/api/meals")
+          .then(res => res.json())
+          .then(data => {
+            const restaurant = data[1];
+            const restaurantDetails = document.getElementById('restaurantDetails');
+      
+            const restaurantName = document.createElement('h2');
+            restaurantName.textContent = `Restaurant Name: ${restaurant.restauName}`;
+            restaurantDetails.appendChild(restaurantName);
+      
+            const restaurantImage = document.createElement('img');
+            restaurantImage.src = restaurant.image;
+            restaurantImage.alt = restaurant.restauName;
+            restaurantDetails.appendChild(restaurantImage);
+
+            const mealName = document.createElement('div');
+            mealName.textContent = `Meal name: ${restaurant.name}`;
+            mealName.classList.add('name'); // Add the class 'price'
+            restaurantDetails.appendChild(mealName);
+      
+            const mealDescription = document.createElement('p');
+            mealDescription.textContent = `Meal Description: ${restaurant.description}`;
+            restaurantDetails.appendChild(mealDescription);
+      
+            const ingredient = document.createElement('div');
+            ingredient.textContent = `Ingredient: ${restaurant.ingredient}`;
+            restaurantDetails.appendChild(ingredient);
+
+            const cuisineType = document.createElement('div');
+            cuisineType.textContent = `CuisineType: ${restaurant.cuisineType}`;
+            restaurantDetails.appendChild(cuisineType);
+
+            const price = document.createElement('div');
+            price.textContent = `Price: ${restaurant.price}`;
+            price.classList.add('price'); // Add the class 'price'
+            restaurantDetails.appendChild(price);
+      
+            const rating = document.createElement('div');
+            rating.textContent = `Rating: ${restaurant.rating}/5`;
+            rating.classList.add('rating'); // Add the class 'rating'
+            restaurantDetails.appendChild(rating);
+          });
+      </script>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity=
+"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+     
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity=
+"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous">
+    </script>
+     
+    <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity=
+"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

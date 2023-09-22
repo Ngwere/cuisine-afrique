@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Sign Up and Sign In Form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/91dd09b519.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name" name="name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password">
+                </div>
+                <p>Lost password <a href="#">Click Here!</a></p>
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Sign Up</button>
+                <button type="submit" class="btn solid" >Submit</button>
+                <button type="button" id="signinBtn" class="disable">Sign In</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+const signupBtn = document.getElementById("signupBtn");
+const signinBtn = document.getElementById("signinBtn");
+const nameField = document.getElementById("nameField");
+const title = document.getElementById("title");
+const form = document.querySelector('form'); // Add this line to select the form element
+
+signinBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "Sign In";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+}
+signupBtn.onclick = function(){
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "Sign Up";
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); //Prevent HTML submission
+
+    const fd = new FormData(form);
+
+    const urlEncoded = new URLSearchParams(fd).toString();
+
+    //const urlEncode = new URLSearchParams(fd).toString();
+
+    fetch('http://localhost:3000/api/users', {
+        method: "POST",
+        body: urlEncoded,
+        headers: {
+            'Content-type': 'application/x-www-form-urlencoded',
+        }
+    })
+})
+
+//const loginForm = document.getElementById('form');
+
+const loginForm = document.getElementById('form');
+
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent form submission
+
+  const usernameInput = document.getElementById('name');
+  const passwordInput = document.getElementById('password');
+
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  // Prepare the request URL to fetch the user ID based on the username and password
+  const url = `http://localhost:3000/api/users?name=${username}&password=${password}`;
+
+  // Log the request URL
+  console.log('Request URL:', url);
+
+  // Send a GET request to fetch the user ID
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer your-access-token',
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Check if the API response contains a valid user ID
+    if (data && data.id) {
+      const userId = data.id;
+
+      // Perform further actions with the retrieved user ID
+      console.log('User ID:', userId);
+
+      // Make another API request or perform actions specific to the user ID
+    } else {
+      console.log('Invalid username or password');
+      // Display an error message or perform other actions for invalid credentials
+    }
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error('Error:', error);
+  });
+
+  // Redirect to the menu screen (optional)
+  window.location.href = 'index.html'; // Replace with the desired URL
+
+  // Reset the form
+  loginForm.reset();
+});
+
+</script>
+</body>
+</html>

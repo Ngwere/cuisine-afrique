@@ -1,5 +1,19 @@
 const asyncHandler = require("express-async-handler");
 const Meal = require('../model/mealModels');
+
+const multer = require('multer');
+
+// Configure Multer storage
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'images');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '_' + file.originalname);
+  }
+});
+
+
 //@desc Get meals
 //@route Get /api/meals
 //@access public
@@ -18,12 +32,12 @@ const getMeals = asyncHandler(async (req, res) => {
 const createMeal = asyncHandler(async (req, res) => {
     console.log("The request body is: ", req.body);
     const { name } = req.body;
-    if (!name ) {
+    if (!name || !image ) {
         res.status(400);
         throw new Error("All fields are mandatory !");
     }
     //return res.status(200).json({ message: `Create meal with id` });
-
+    // Configure Multer storage
     //the mapping logic using sequlize
     const meal = {
         name: req.body.name,
@@ -33,11 +47,12 @@ const createMeal = asyncHandler(async (req, res) => {
         ingredient: req.body.ingredient,
         restaurantId: req.body.restaurantId,
         price: req.body.price,
-        image: req.body.image
+        image: req.file
     };
 
     //saving the values to the database
     Meal.create(meal).then(data => {
+        image.mv(__dirname + '/images' + image.name);
         res.send(data);
     }).catch(err => {
         res.status(500).send({
