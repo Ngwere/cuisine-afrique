@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db.config');
+const sequelize = require('../../config/db.config');
 //const associateModels = require('./associations');
 const User = require('./userModels');
 const Meal = require('./mealModels');

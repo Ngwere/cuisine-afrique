@@ -1,5 +1,5 @@
 const express = require('express');
-const sequelize = require('./src/config/db.config');
+const sequelize = require('../config/db.config');
 const User = require('./model/userModels');
 const errorHandler = require('./middleware/errorHandler');
 const dotenv = require('dotenv').config();
