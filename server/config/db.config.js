@@ -6,7 +6,6 @@ const dbUserPassword = process.env['DB_USER_PASSWORD'];
 const dbCluster = process.env['DB_CLUSTER'];
 const dbName = process.env['DB_NAME'];
 const postgresURL = `postgres://${dbUserName}:${dbUserPassword}@${dbCluster}.render.com/${dbName}?ssl=true`;
-console.log(postgresURL);
 
 const sequelize = new Sequelize(postgresURL, {
 	dielect: 'postgres',
