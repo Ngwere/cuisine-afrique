@@ -8,7 +8,7 @@ const cors = require("cors");
 const multer = require('multer');
 const app = express();
 
-//Set port, listen for requests 
+
 const port = process.env.PORT || 5000;
 
 app.use(express.static('images'));
