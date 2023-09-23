@@ -1,16 +1,21 @@
 const Sequelize = require('sequelize');
+const dotenv = require('dotenv');
+dotenv.config();
+const dbUserName = process.env['DB_USER_NAME'];
+const dbUserPassword = process.env['DB_USER_PASSWORD'];
+const dbCluster = process.env['DB_CLUSTER'];
+const dbName = process.env['DB_NAME'];
+const postgresURL = `postgres://${dbUserName}:${dbUserPassword}@${dbCluster}.render.com/${dbName}?ssl=true`;
+console.log(postgresURL);
 
-const sequelize = new Sequelize(
-	'postgres://cuisinafrique_user:QzVL3BeC49qIrdudFBvODgfW2c5JYUz9@dpg-ck7ml6fsasqs73870qh0-a.oregon-postgres.render.com/cuisinafrique?ssl=true',
-	{
-		dielect: 'postgres',
-		protocol: 'postgres',
-		dialectOptions: {
-			ssl: process.env.DB_ENABLE_SSL && {
-				require: true,
-			},
+const sequelize = new Sequelize(postgresURL, {
+	dielect: 'postgres',
+	protocol: 'postgres',
+	dialectOptions: {
+		ssl: process.env.DB_ENABLE_SSL && {
+			require: true,
 		},
-	}
-);
+	},
+});
 
 module.exports = sequelize;
